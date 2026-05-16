@@ -480,35 +480,35 @@ p {
   border-bottom: 1px solid var(--line);
 }
 
-.timeline {
+.experience-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
+  align-items: start;
 }
 
-.timeline article {
+.experience-grid article {
   display: flex;
   flex-direction: column;
-  min-height: 260px;
   padding: 1.25rem;
   background: var(--panel);
   border: 1px solid var(--line);
   border-radius: 8px;
 }
 
-.timeline span {
+.experience-grid span {
   color: var(--coral);
   font-size: 0.86rem;
   font-weight: 780;
   text-transform: uppercase;
 }
 
-.timeline h3 {
+.experience-grid h3 {
   margin: 0.75rem 0 0.65rem;
 }
 
-.timeline p {
-  margin: auto 0 0;
+.experience-grid p {
+  margin: 0;
 }
 
 .credential-strip {
@@ -616,7 +616,7 @@ p {
     grid-template-columns: 1fr;
   }
 
-  .timeline {
+  .experience-grid {
     grid-template-columns: 1fr;
   }
 
