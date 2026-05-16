@@ -323,7 +323,8 @@ p {
   color: var(--muted);
 }
 
-.feature-grid {
+.feature-grid,
+.impact-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1rem;
@@ -347,6 +348,39 @@ p {
   color: var(--coral);
   font-weight: 780;
   margin-bottom: 2.8rem;
+}
+
+.impact-section {
+  border-top: 1px solid var(--line);
+}
+
+.impact-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.impact-card {
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.impact-card span {
+  color: var(--coral);
+  font-size: clamp(2rem, 4vw, 3.1rem);
+  font-weight: 780;
+  line-height: 0.95;
+}
+
+.impact-card h3 {
+  margin-top: 1.2rem;
+}
+
+.impact-card p {
+  margin: auto 0 0;
 }
 
 .research-section {
@@ -442,6 +476,59 @@ p {
   gap: clamp(2rem, 6vw, 5rem);
 }
 
+.experience-section {
+  border-bottom: 1px solid var(--line);
+}
+
+.timeline {
+  display: grid;
+  gap: 1rem;
+}
+
+.timeline article {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: clamp(1rem, 3vw, 2rem);
+  padding: 1.25rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.timeline span {
+  color: var(--coral);
+  font-weight: 780;
+}
+
+.timeline h3 {
+  margin-bottom: 0.45rem;
+}
+
+.timeline p {
+  margin: 0;
+}
+
+.credential-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.credential-strip div {
+  padding: 1.25rem;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.credential-strip span {
+  color: var(--teal-dark);
+  font-weight: 780;
+}
+
+.credential-strip p {
+  margin: 0.35rem 0 0;
+}
+
 .principles {
   display: grid;
   gap: 1rem;
@@ -512,8 +599,16 @@ p {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .impact-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .research-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .credential-strip {
+    grid-template-columns: 1fr;
   }
 
   .research-card-wide {
@@ -551,6 +646,14 @@ p {
   }
 
   .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .impact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline article {
     grid-template-columns: 1fr;
   }
 
