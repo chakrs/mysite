@@ -349,6 +349,51 @@ p {
   margin-bottom: 2.8rem;
 }
 
+.research-section {
+  border-top: 1px solid var(--line);
+}
+
+.link-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.link-grid a {
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.25rem;
+  color: inherit;
+  text-decoration: none;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.link-grid a:hover,
+.link-grid a:focus-visible {
+  transform: translateY(-2px);
+  border-color: rgba(13, 124, 115, 0.5);
+  box-shadow: 0 14px 34px rgba(16, 24, 23, 0.08);
+}
+
+.link-grid span {
+  color: var(--ink);
+  font-weight: 780;
+}
+
+.link-grid small {
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.4;
+}
+
 .band {
   background: var(--charcoal);
   color: #ffffff;
@@ -462,6 +507,10 @@ p {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .link-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .contact-section {
     align-items: start;
   }
@@ -493,6 +542,10 @@ p {
   }
 
   .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .link-grid {
     grid-template-columns: 1fr;
   }
 
