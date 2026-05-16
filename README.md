@@ -12,6 +12,11 @@ python3 -m http.server 5173
 
 Then open <http://localhost:5173>.
 
+## Deploy
+
+GitHub Pages deployment is configured with `.github/workflows/pages.yml`.
+Pushes to `main` publish the static site from the repository root.
+
 ## Maintain content
 
 - Main page structure: `index.html`
