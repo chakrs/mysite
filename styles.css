@@ -482,28 +482,33 @@ p {
 
 .timeline {
   display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
 }
 
 .timeline article {
-  display: grid;
-  grid-template-columns: 150px minmax(0, 1fr);
-  gap: clamp(1rem, 3vw, 2rem);
-  padding: 1.25rem 0;
-  border-top: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  min-height: 260px;
+  padding: 1.25rem;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
 }
 
 .timeline span {
   color: var(--coral);
+  font-size: 0.86rem;
   font-weight: 780;
+  text-transform: uppercase;
 }
 
 .timeline h3 {
-  margin-bottom: 0.45rem;
+  margin: 0.75rem 0 0.65rem;
 }
 
 .timeline p {
-  margin: 0;
+  margin: auto 0 0;
 }
 
 .credential-strip {
@@ -611,6 +616,10 @@ p {
     grid-template-columns: 1fr;
   }
 
+  .timeline {
+    grid-template-columns: 1fr;
+  }
+
   .research-card-wide {
     grid-column: span 2;
   }
@@ -650,10 +659,6 @@ p {
   }
 
   .impact-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .timeline article {
     grid-template-columns: 1fr;
   }
 
