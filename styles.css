@@ -868,7 +868,7 @@ p {
 
 .contact-section {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-columns: minmax(420px, 1fr) minmax(280px, 520px);
   align-items: center;
   gap: 2rem;
   margin-top: 3rem;
@@ -882,8 +882,12 @@ p {
 }
 
 .contact-section h2 {
-  max-width: 800px;
+  max-width: 680px;
   font-size: clamp(1.8rem, 3vw, 3rem);
+}
+
+.contact-section .contact-actions {
+  max-width: 520px;
 }
 
 .site-footer {
