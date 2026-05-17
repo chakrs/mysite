@@ -484,6 +484,44 @@ p {
   margin: auto 0 0;
 }
 
+.impact-stories {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.1rem;
+  margin-top: 1.5rem;
+}
+
+.impact-stories article {
+  padding: 1.4rem;
+  background: linear-gradient(180deg, var(--panel) 0%, var(--warm-panel) 100%);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.impact-stories span {
+  display: block;
+  margin-bottom: 1.4rem;
+  color: var(--coral);
+  font-size: 0.72rem;
+  font-weight: 780;
+  text-transform: uppercase;
+}
+
+.impact-stories h3 {
+  margin-bottom: 0.85rem;
+  font-size: 1.18rem;
+}
+
+.impact-stories p {
+  margin: 0;
+}
+
+.impact-stories p + p {
+  margin-top: 0.8rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid var(--line);
+}
+
 .tech-strip {
   display: flex;
   flex-wrap: wrap;
@@ -678,21 +716,41 @@ p {
 }
 
 .experience-grid {
+  position: relative;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
-  align-items: start;
+  gap: 1.1rem;
+  padding-left: 1.75rem;
+}
+
+.experience-grid::before {
+  content: "";
+  position: absolute;
+  left: 0.35rem;
+  top: 0.4rem;
+  bottom: 0.4rem;
+  width: 1px;
+  background: var(--line);
 }
 
 .experience-grid article {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  padding: 1.35rem 1.4rem;
+  padding: 1.25rem 1.35rem;
   background: var(--panel);
   border: 1px solid var(--line);
   border-radius: 8px;
   box-shadow: 0 10px 28px rgba(16, 24, 23, 0.04);
+}
+
+.experience-grid article::before {
+  content: "";
+  position: absolute;
+  left: -1.65rem;
+  top: 1.45rem;
+  width: 11px;
+  height: 11px;
+  background: var(--paper);
+  border: 3px solid var(--teal);
+  border-radius: 999px;
 }
 
 .experience-current,
@@ -727,8 +785,15 @@ p {
   margin: 0.75rem 0 0.65rem;
 }
 
-.experience-grid p {
+.experience-grid ul {
+  display: grid;
+  gap: 0.45rem;
   margin: 0;
+  padding-left: 1.05rem;
+}
+
+.experience-grid li {
+  color: var(--muted);
 }
 
 .credential-strip {
@@ -830,12 +895,20 @@ p {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .impact-stories {
+    grid-template-columns: 1fr;
+  }
+
   .credential-strip {
     grid-template-columns: 1fr;
   }
 
   .experience-grid {
-    grid-template-columns: 1fr;
+    padding-left: 1.25rem;
+  }
+
+  .experience-grid article::before {
+    left: -1.15rem;
   }
 
   .research-service-panel {
