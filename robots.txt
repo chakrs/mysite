@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://chakrs.github.io/mysite/sitemap.xml
