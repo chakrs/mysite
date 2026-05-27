@@ -209,9 +209,9 @@ a {
 .hero h1 {
   max-width: 980px;
   margin: 0;
-  font-size: clamp(2.95rem, 6.8vw, 6.6rem);
+  font-size: clamp(1.77rem, 4.08vw, 3.96rem);
   font-weight: 560;
-  line-height: 1;
+  line-height: 1.08;
   letter-spacing: 0;
   overflow-wrap: anywhere;
 }
@@ -1135,8 +1135,8 @@ p {
   }
 
   .hero h1 {
-    font-size: clamp(2.2rem, 11vw, 3rem);
-    line-height: 1;
+    font-size: clamp(1.32rem, 6.6vw, 1.8rem);
+    line-height: 1.12;
   }
 
   .hero-role {
