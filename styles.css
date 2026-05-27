@@ -147,7 +147,7 @@ a {
 
 .hero {
   position: relative;
-  min-height: 78svh;
+  min-height: 64svh;
   display: grid;
   align-items: end;
   overflow: hidden;
@@ -179,21 +179,21 @@ a {
   width: min(var(--max), calc(100% - 2rem));
   min-width: 0;
   margin: 0 auto;
-  padding: 6.25rem 0 4rem 1.5rem;
+  padding: 5.25rem 0 2.75rem 1.5rem;
 }
 
 .hero-content::before {
   content: "";
   position: absolute;
   left: 0;
-  top: 6.25rem;
-  bottom: 4.25rem;
+  top: 5.25rem;
+  bottom: 3rem;
   width: 2px;
   background: linear-gradient(180deg, var(--amber), rgba(255, 255, 255, 0.08));
 }
 
 .eyebrow {
-  margin: 0 0 1rem;
+  margin: 0 0 0.65rem;
   color: var(--amber-readable);
   font-size: 0.78rem;
   font-weight: 760;
@@ -207,9 +207,9 @@ a {
 }
 
 .hero h1 {
-  max-width: 860px;
+  max-width: 720px;
   margin: 0;
-  font-size: clamp(1.48rem, 3.35vw, 3.15rem);
+  font-size: clamp(1.28rem, 2.55vw, 2.3rem);
   font-weight: 560;
   line-height: 1.08;
   letter-spacing: 0;
@@ -217,19 +217,19 @@ a {
 }
 
 .hero-role {
-  max-width: 700px;
-  margin: 0.8rem 0 0;
+  max-width: 640px;
+  margin: 0.55rem 0 0;
   color: #ffffff;
-  font-size: clamp(1.05rem, 2.1vw, 1.55rem);
+  font-size: clamp(0.96rem, 1.45vw, 1.2rem);
   font-weight: 700;
   line-height: 1.15;
 }
 
 .hero-copy {
-  max-width: 680px;
-  margin: 0.8rem 0 0;
+  max-width: 620px;
+  margin: 0.55rem 0 0;
   color: rgba(255, 255, 255, 0.84);
-  font-size: clamp(0.98rem, 1.45vw, 1.12rem);
+  font-size: clamp(0.88rem, 1.05vw, 1rem);
   overflow-wrap: anywhere;
 }
 
@@ -242,12 +242,13 @@ a {
 }
 
 .hero-actions {
-  margin-top: 1.35rem;
+  margin-top: 0.9rem;
 }
 
 .hero-actions .button {
-  min-height: 44px;
-  padding: 0.68rem 0.95rem;
+  min-height: 38px;
+  padding: 0.52rem 0.78rem;
+  font-size: 0.88rem;
 }
 
 .button {
@@ -1041,7 +1042,7 @@ p {
   }
 
   .hero {
-    min-height: 78svh;
+    min-height: 66svh;
   }
 
   .hero-overlay {
@@ -1135,21 +1136,38 @@ p {
 
   .hero-content {
     width: min(var(--max), calc(100% - 1.25rem));
-    padding: 5.75rem 0 2.5rem 1rem;
+    padding: 5rem 0 1.75rem 1rem;
   }
 
   .hero-content::before {
-    top: 5.75rem;
-    bottom: 2.75rem;
+    top: 5rem;
+    bottom: 2rem;
   }
 
   .hero h1 {
-    font-size: clamp(1.12rem, 5.5vw, 1.5rem);
+    font-size: clamp(1rem, 4.8vw, 1.28rem);
     line-height: 1.12;
   }
 
   .hero-role {
-    font-size: clamp(0.98rem, 4.8vw, 1.18rem);
+    font-size: clamp(0.86rem, 4vw, 1rem);
+  }
+
+  .hero-copy {
+    font-size: 0.82rem;
+    line-height: 1.4;
+  }
+
+  .hero-actions {
+    gap: 0.45rem;
+    margin-top: 0.65rem;
+  }
+
+  .hero-actions .button {
+    width: auto;
+    min-height: 34px;
+    padding: 0.42rem 0.55rem;
+    font-size: 0.76rem;
   }
 
   .profile-photo {
