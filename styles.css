@@ -220,16 +220,9 @@ a {
   max-width: 640px;
   margin: 0.55rem 0 0;
   color: #ffffff;
-  font-size: clamp(0.96rem, 1.45vw, 1.2rem);
-  font-weight: 700;
-  line-height: 1.15;
-}
-
-.hero-copy {
-  max-width: 620px;
-  margin: 0.55rem 0 0;
-  color: rgba(255, 255, 255, 0.84);
-  font-size: clamp(0.88rem, 1.05vw, 1rem);
+  font-size: clamp(0.94rem, 1.35vw, 1.12rem);
+  font-weight: 650;
+  line-height: 1.32;
   overflow-wrap: anywhere;
 }
 
@@ -1025,19 +1018,28 @@ p {
 
   .nav {
     flex-basis: 100%;
+    flex-wrap: nowrap;
     justify-content: flex-start;
     gap: 0.5rem;
+    overflow-x: auto;
     padding-top: 0.75rem;
+    scrollbar-width: none;
+  }
+
+  .nav::-webkit-scrollbar {
+    display: none;
   }
 
   .nav a {
     display: flex;
     align-items: center;
-    min-height: 44px;
-    padding: 0.65rem 0.75rem;
+    flex: 0 0 auto;
+    min-height: 34px;
+    padding: 0.4rem 0.62rem;
     background: rgba(255, 255, 255, 0.68);
     border: 1px solid var(--line);
     border-radius: 8px;
+    font-size: 0.84rem;
     font-weight: 700;
   }
 
@@ -1122,26 +1124,26 @@ p {
 
 @media (max-width: 620px) {
   .site-header {
-    padding: 0.85rem 0.75rem;
+    padding: 0.65rem 0.75rem;
   }
 
   .brand {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
 
   .brand-mark {
-    width: 38px;
-    height: 38px;
+    width: 34px;
+    height: 34px;
   }
 
   .hero-content {
     width: min(var(--max), calc(100% - 1.25rem));
-    padding: 5rem 0 1.75rem 1rem;
+    padding: 4.55rem 0 1.55rem 1rem;
   }
 
   .hero-content::before {
-    top: 5rem;
-    bottom: 2rem;
+    top: 4.55rem;
+    bottom: 1.8rem;
   }
 
   .hero h1 {
@@ -1150,12 +1152,8 @@ p {
   }
 
   .hero-role {
-    font-size: clamp(0.86rem, 4vw, 1rem);
-  }
-
-  .hero-copy {
-    font-size: 0.82rem;
-    line-height: 1.4;
+    font-size: clamp(0.82rem, 3.65vw, 0.95rem);
+    line-height: 1.34;
   }
 
   .hero-actions {
@@ -1168,6 +1166,20 @@ p {
     min-height: 34px;
     padding: 0.42rem 0.55rem;
     font-size: 0.76rem;
+  }
+
+  .hero-actions .button-secondary[href*="linkedin"] {
+    display: none;
+  }
+
+  .nav {
+    gap: 0.35rem;
+  }
+
+  .nav a {
+    min-height: 32px;
+    padding: 0.32rem 0.45rem;
+    font-size: 0.78rem;
   }
 
   .profile-photo {
