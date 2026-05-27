@@ -147,7 +147,7 @@ a {
 
 .hero {
   position: relative;
-  min-height: 64svh;
+  min-height: 100svh;
   display: grid;
   align-items: end;
   overflow: hidden;
@@ -1044,7 +1044,7 @@ p {
   }
 
   .hero {
-    min-height: 66svh;
+    min-height: 100svh;
   }
 
   .hero-overlay {
