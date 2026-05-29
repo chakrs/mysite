@@ -28,6 +28,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 90px;
 }
 
 body {
@@ -1159,6 +1160,10 @@ p {
 @media (max-width: 620px) {
   .site-header {
     padding: 0.65rem 0.75rem;
+  }
+
+  html {
+    scroll-padding-top: 140px;
   }
 
   .brand {
