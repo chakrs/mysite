@@ -1037,6 +1037,14 @@ p {
     min-height: 72px;
   }
 
+  .hero-content {
+    padding: calc(110px + 1rem) 0 2rem 1.5rem;
+  }
+
+  .hero-content::before {
+    top: calc(110px + 1rem);
+  }
+
   .nav {
     flex-basis: 100%;
     flex-wrap: nowrap;
