@@ -1,3 +1,10 @@
+window.dataLayer = window.dataLayer || [];
+window.gtag = function gtag() {
+  window.dataLayer.push(arguments);
+};
+window.gtag("js", new Date());
+window.gtag("config", "G-0MXMBEN63M");
+
 const header = document.querySelector(".site-header");
 const year = document.querySelector("#year");
 
