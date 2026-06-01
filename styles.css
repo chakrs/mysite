@@ -17,6 +17,8 @@
   --soft-teal: #eaf2ee;
   --warm-panel: #fffdf8;
   --max: 1180px;
+  --desktop-max: 1080px;
+  --page-gutter: clamp(2rem, 7vw, 6rem);
   --radius: 8px;
   --transition: 0.2s ease;
   --panel-border: 1px solid var(--line);
@@ -296,8 +298,18 @@ a {
 .band-content,
 .contact-section,
 .site-footer {
-  width: min(var(--max), calc(100% - 2rem));
+  width: min(var(--max), calc(100% - var(--page-gutter)));
   margin: 0 auto;
+}
+
+@media (min-width: 1100px) {
+  .intro-section,
+  .section,
+  .band-content,
+  .contact-section,
+  .site-footer {
+    width: min(var(--desktop-max), calc(100% - var(--page-gutter)));
+  }
 }
 
 .intro-section {
